@@ -89,8 +89,15 @@ int main(int argc,char**argv)
 							break;
 
 						case 'j':
-							printf("\033[1B");
-							fflush(stdout);
+							{
+								Point p=term_curpos();
+
+								if((size_t)p.y<v->len)
+								{
+									printf("\033[1B");
+									fflush(stdout);
+								}
+							}
 							break;
 
 						case 'k':
@@ -105,6 +112,20 @@ int main(int argc,char**argv)
 
 						case 'q':
 							running=false;
+							break;
+
+						case 'g':
+							{
+								Point p=term_curpos();
+								term_gotoxy(p.x,1);
+							}
+							break;
+
+						case 'G':
+							{
+								Point p=term_curpos();
+								term_gotoxy(p.x,v->len);
+							}
 							break;
 
 						case 'a':

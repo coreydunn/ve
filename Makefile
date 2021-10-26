@@ -1,4 +1,4 @@
-CC=      tcc
+CC=      cc
 CFLAGS=  -Wfatal-errors -Wall -Wextra
 LDFLAGS= -s
 OBJS=    str.o vec.o term.o ve.o

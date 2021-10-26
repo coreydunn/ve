@@ -1,6 +1,7 @@
 VE TODO -*- mode: org -*-
 
 1. Normal mode
+   - [X] Make getl return only a single line (!!)
    - [X] Move cursor
    - [ ] Open other file
    - [ ] Save

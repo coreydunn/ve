@@ -43,3 +43,14 @@ void term_setcanon(int b)
 		state.c_lflag&=~ICANON;
 	tcsetattr(0,TCSAFLUSH,&state);
 }
+
+Point term_curpos(void)
+{
+	Point p={0,0};
+
+	printf("\033[6n");
+	fflush(stdout);
+
+	fscanf(stdin,"\033[%d;%dR",&p.y,&p.x);
+	return p;
+}
