@@ -2,7 +2,7 @@ VE TODO -*- mode: org -*-
 
 1. Normal mode
    - [X] Move cursor
-   - [ ] Edit file
+   - [ ] Open other file
    - [ ] Save
 2. Insert mode
    - [ ] Actually add text, modify line buffer/Str

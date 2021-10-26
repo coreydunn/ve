@@ -40,10 +40,7 @@ int main(int argc,char**argv)
 				char*cs=getl(f);
 
 				if(cs!=NULL)
-				{
-					vec_push(v,"");
-					str_cpy(v->b+v->len-1,cs);
-				}
+					vec_push(v,cs);
 
 				if(cs)
 					free(cs);
@@ -70,6 +67,11 @@ int main(int argc,char**argv)
 				{
 					switch(c)
 					{
+
+						case '0':
+							printf("\033[1G");
+							fflush(stdout);
+							break;
 
 						case 'K':
 							printf("\033[1T");
